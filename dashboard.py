@@ -178,10 +178,8 @@ async function load() {
   } catch(e) { idr = ''; }
   document.getElementById('gold-cards').innerHTML = `
     <div class="card"><h2>Harga Emas (XAU)</h2><div class="val neu">$${sent.harga?.toLocaleString() || '?'}</div><div style="font-size:12px;color:#8b949e">${sent.harga_src || ''}</div>${idr}</div>
-    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div></div>
+    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div><div style="font-size:12px;color:#8b949e;margin-top:6px">Sentimen ${sent.avg_compound} · Fear ${sent.fear_hits}</div></div>
     ${stTrend ? `<div class="card"><h2>Vonis-ST</h2><div class="val ${stc}" style="font-size:22px">${stTrend}</div></div>` : ''}
-    <div class="card"><h2>Sentimen Rata2</h2><div class="val ${sent.avg_compound < 0 ? 'neg' : 'pos'}">${sent.avg_compound}</div></div>
-    <div class="card"><h2>Fear Hits</h2><div class="val ${sent.fear_hits > 0 ? 'neg' : 'neu'}">${sent.fear_hits}</div></div>
     <div class="card" id="paper-mini"><h2>📄 Paper</h2><div class="val neu">…</div></div>
     <div class="card" id="paperst-mini"><h2>📄 Paper-ST</h2><div class="val neu">…</div></div>
     ${sent.cot && sent.cot.date ? `<div class="card"><h2>COT MM Net (${sent.cot.date.slice(5)})</h2><div class="val ${sent.cot.mm_net >= 0 ? 'pos' : 'neg'}">${sent.cot.mm_net >= 0 ? '+' : ''}${sent.cot.mm_net.toLocaleString()}</div><div style="font-size:12px;color:#8b949e">${sent.cot.mm_pct_oi}% OI · WoW ${sent.cot.mm_chg_wow >= 0 ? '+' : ''}${sent.cot.mm_chg_wow.toLocaleString()} (CFTC, tiap Selasa)</div></div>` : ''}
