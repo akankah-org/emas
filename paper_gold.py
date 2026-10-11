@@ -29,6 +29,11 @@ STOP_ATR = 1.5
 TP_R = 2.0
 FEE = 0.001
 SLIP = 0.0005
+# Trailing (adopsi mesin tune_20062026, 12 Okt; nilai awal skala ATR emas,
+# BELUM tervalidasi grid — ganti setelah uji). Aktif +1 ATR, jarak 0,5 ATR.
+TRAIL_ACT_ATR = 1.0
+TRAIL_DIST_ATR = 0.5
+RULES = "v2+trail-2026-10-12"
 
 
 def load(p, default):
@@ -75,9 +80,17 @@ def main():
 
     op = st.get("open")
     if op:
+        # trailing: rawat peak + stop ikut naik (hanya LONG di emas)
+        peak = max(op.get("peak", op["entry"]), day["h"])
+        op["peak"] = peak
+        tstop = peak - TRAIL_DIST_ATR * a
+        if peak >= op["entry"] + TRAIL_ACT_ATR * a and tstop > op["stop"]:
+            op["stop"] = tstop
+            op["trailed"] = True
         closed, alasan, px = None, "", 0.0
         if day["l"] <= op["stop"]:
-            closed, alasan, px = True, "stop", op["stop"]
+            closed, alasan, px = True, \
+                ("trail" if op.get("trailed") else "stop"), op["stop"]
         elif day["h"] >= op["tp"]:
             closed, alasan, px = True, "tp", op["tp"]
         if closed:
@@ -107,7 +120,9 @@ def main():
             st["open"] = {"qty": qty, "entry": entry,
                           "stop": entry - STOP_ATR * a,
                           "tp": entry + TP_R * STOP_ATR * a,
-                          "date": today, "risk_amt": risk_amt}
+                          "peak": entry, "trailed": False,
+                          "date": today, "risk_amt": risk_amt,
+                          "rules": RULES}
             eq -= qty * entry * FEE
             print(f"paper-gold {today}: buka LONG @{entry:.2f}")
 
