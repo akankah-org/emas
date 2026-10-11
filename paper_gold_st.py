@@ -116,6 +116,10 @@ def main():
     equity = load(EQUITY, [])
     flip_up = trend[-2] == -1 and trend[-1] == 1
     flip_down = trend[-2] == 1 and trend[-1] == -1
+    st["signal"] = {"trend": "BULLISH" if trend[-1] == 1 else "BEARISH",
+                    "st": round(float(stl[-1]), 2), "date": today,
+                    "flip": "UP" if flip_up else ("DOWN" if flip_down
+                                                  else "-")}
 
     op = st.get("open")
     if op:
