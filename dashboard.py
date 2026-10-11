@@ -192,7 +192,7 @@ async function load() {
     if (pst) {
       const ret = (pst.equity / 10000 - 1) * 100;
       document.getElementById('paper-mini').innerHTML =
-        `<h2><a href="#paper" style="color:#8b949e;text-decoration:none">📄 Paper →</a></h2><div class="val ${ret >= 0 ? 'pos' : 'neg'}">${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%</div><div style="font-size:12px;color:#8b949e">${ptr.length} trade${pst.open ? ' · <strong>OPEN</strong>' : ''}</div>`;
+        `<h2><a href="#paper" style="color:#8b949e;text-decoration:none">📄 Paper →</a></h2><div class="val ${ret >= 0 ? 'pos' : 'neg'}">${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%</div><div style="font-size:12px;color:#8b949e">Vonis: <strong>${sent.vonis || '?'}</strong></div><div style="font-size:12px;color:#8b949e">${ptr.length} trade${pst.open ? ' · <strong>OPEN</strong>' : ''}</div>`;
       const n = ptr.length, w = ptr.filter(t => t.pnl > 0).length;
       const gp = ptr.filter(t => t.pnl > 0).reduce((s, t) => s + t.pnl, 0);
       const gl = -ptr.filter(t => t.pnl <= 0).reduce((s, t) => s + t.pnl, 0) || 1e-9;
@@ -227,7 +227,7 @@ async function load() {
     if (sst) {
       const sret = (sst.equity / 10000 - 1) * 100;
       document.getElementById('paperst-mini').innerHTML =
-        `<h2><a href="#paperst" style="color:#8b949e;text-decoration:none">📄 Paper-ST →</a></h2><div class="val ${sret >= 0 ? 'pos' : 'neg'}">${sret >= 0 ? '+' : ''}${sret.toFixed(1)}%</div><div style="font-size:12px;color:#8b949e">${str.length} trade${sst.open ? ' · <strong>OPEN</strong>' : ''}</div>`;
+        `<h2><a href="#paperst" style="color:#8b949e;text-decoration:none">📄 Paper-ST →</a></h2><div class="val ${sret >= 0 ? 'pos' : 'neg'}">${sret >= 0 ? '+' : ''}${sret.toFixed(1)}%</div><div style="font-size:12px;color:#8b949e">Vonis-ST: <strong>${sst.signal ? sst.signal.trend : '?'}</strong></div><div style="font-size:12px;color:#8b949e">${str.length} trade${sst.open ? ' · <strong>OPEN</strong>' : ''}</div>`;
       const sn = str.length, sw = str.filter(t => t.pnl > 0).length;
       const sgp = str.filter(t => t.pnl > 0).reduce((s, t) => s + t.pnl, 0);
       const sgl = -str.filter(t => t.pnl <= 0).reduce((s, t) => s + t.pnl, 0) || 1e-9;
