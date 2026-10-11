@@ -11,6 +11,9 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      TELE_BOT: ${{ secrets.TELE_LAMPUBTC }}
+      TELE_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -37,3 +40,21 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "auto: refresh emas [skip ci]"
           git push origin main
+
+      - name: Notif vonis Telegram
+        if: env.TELE_BOT != ''
+        run: |
+          MSG=$(python - <<'PYEOF'
+          import json
+          s = json.load(open('data/gold_sentiment.json', encoding='utf-8'))
+          c = s.get('cot') or {}
+          print(f"Emas ${s.get('harga'):,.1f} - {s.get('vonis')}".replace(',', '.'))
+          print(f"Sentimen {s.get('avg_compound')} (n={s.get('n')}, fear={s.get('fear_hits')})")
+          if c.get('date'):
+              print(f"COT {c['date']}: MM {c['mm_net']:+,} ({c['mm_pct_oi']}% OI)".replace(',', '.'))
+          print(s.get('waktu', ''))
+          PYEOF
+          )
+          curl -s -X POST "https://api.telegram.org/bot${TELE_BOT}/sendMessage" \
+            -d "chat_id=${TELE_CHAT}" --data-urlencode "text=${MSG}" > /dev/null
+          echo "digest terkirim"
