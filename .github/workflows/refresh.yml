@@ -32,6 +32,7 @@ jobs:
         run: |
           python collect.py
           python paper_gold.py
+          python paper_gold_st.py
 
       - name: Commit data kembali
         run: |

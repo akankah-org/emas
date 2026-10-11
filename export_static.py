@@ -11,7 +11,9 @@ from dashboard import HTML
 STATIC = os.path.join(BASE, "static")
 FILES = ["latest.json", "gold_sentiment.json", "gold_price.json",
          "gold_ohlc.json", "paper_gold_state.json", "paper_gold_trades.json",
-         "paper_gold_equity.json", "near_miss_gold.json"]
+         "paper_gold_equity.json", "paper_st_state.json",
+         "paper_st_trades.json", "paper_st_equity.json",
+         "near_miss_gold.json"]
 
 
 def main():

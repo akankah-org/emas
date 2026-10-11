@@ -66,6 +66,10 @@ h1{color:#e3b341;margin-bottom:5px}
 <div style="max-width:700px;margin:10px auto"><canvas id="paperChart"></canvas></div>
 <div id="paper-trades" style="font-size:13px;overflow-x:auto">-</div>
 <div style="font-size:12px;color:#8b949e;margin-top:8px">Aturan: LONG saat vonis BELI · risiko 1% · stop 1,5×ATR-14 · TP 2R · tanpa leverage · dievaluasi setelah ≥30 trade vs buy-and-hold.</div></div>
+<div class="card" style="margin-bottom:20px" id="paperst"><h2>📄 Paper-ST Supertrend (SIMULASI)</h2>
+<div id="paperst-stats" style="font-size:13px;line-height:1.8">Memuat…</div>
+<div id="paperst-trades" style="font-size:13px;overflow-x:auto">-</div>
+<div style="font-size:12px;color:#8b949e;margin-top:8px">Param finder p=10/m=0,3 (TEST +1,1%, n=9 — BELUM validasi kuat) · LONG-only · dievaluasi setelah ≥30 trade vs buy-and-hold.</div></div>
 <div class="card" style="margin-bottom:20px"><h2>Uji Musiman (live)</h2><div id="season-test" style="font-size:13px;line-height:1.8">Memuat…</div>
 <div style="font-size:12px;color:#8b949e;margin-top:8px">Klaim: Jan +5% (bullish) · Sep KONFLIKS (sumber trader: bearish 90% dekade terakhir vs paper SSRN: +2,23% terbaik) · Q1 positif 70% (20 thn) · Jul positif 65%. Bulan tanpa klaim = tak dinilai. Skor dari histori harga sendiri.</div></div>
 <p class="footer">FXStreet + Fed Press | Harga Swissquote spot | Lokal PC (tanpa kuota)</p>
@@ -175,6 +179,7 @@ async function load() {
     <div class="card"><h2>Sentimen Rata2</h2><div class="val ${sent.avg_compound < 0 ? 'neg' : 'pos'}">${sent.avg_compound}</div></div>
     <div class="card"><h2>Fear Hits</h2><div class="val ${sent.fear_hits > 0 ? 'neg' : 'neu'}">${sent.fear_hits}</div></div>
     <div class="card" id="paper-mini"><h2>📄 Paper</h2><div class="val neu">…</div></div>
+    <div class="card" id="paperst-mini"><h2>📄 Paper-ST</h2><div class="val neu">…</div></div>
     ${sent.cot && sent.cot.date ? `<div class="card"><h2>COT MM Net (${sent.cot.date.slice(5)})</h2><div class="val ${sent.cot.mm_net >= 0 ? 'pos' : 'neg'}">${sent.cot.mm_net >= 0 ? '+' : ''}${sent.cot.mm_net.toLocaleString()}</div><div style="font-size:12px;color:#8b949e">${sent.cot.mm_pct_oi}% OI · WoW ${sent.cot.mm_chg_wow >= 0 ? '+' : ''}${sent.cot.mm_chg_wow.toLocaleString()} (CFTC, tiap Selasa)</div></div>` : ''}
   `;
   try {
@@ -213,6 +218,29 @@ async function load() {
       document.getElementById('paper-stats').textContent = 'paper_bot belum pernah jalan.';
     }
   } catch(e) { document.getElementById('paper-stats').textContent = 'Gagal muat paper.'; }
+  try {
+    const [sst, str, sequ] = await Promise.all([
+      fetch('data/paper_st_state.json' + bust).then(r=>r.json()).catch(()=>null),
+      fetch('data/paper_st_trades.json' + bust).then(r=>r.json()).catch(()=>[]),
+      fetch('data/paper_st_equity.json' + bust).then(r=>r.json()).catch(()=>[])
+    ]);
+    if (sst) {
+      const sret = (sst.equity / 10000 - 1) * 100;
+      document.getElementById('paperst-mini').innerHTML =
+        `<h2><a href="#paperst" style="color:#8b949e;text-decoration:none">📄 Paper-ST →</a></h2><div class="val ${sret >= 0 ? 'pos' : 'neg'}">${sret >= 0 ? '+' : ''}${sret.toFixed(1)}%</div><div style="font-size:12px;color:#8b949e">${str.length} trade${sst.open ? ' · <strong>OPEN</strong>' : ''}</div>`;
+      const sn = str.length, sw = str.filter(t => t.pnl > 0).length;
+      const sgp = str.filter(t => t.pnl > 0).reduce((s, t) => s + t.pnl, 0);
+      const sgl = -str.filter(t => t.pnl <= 0).reduce((s, t) => s + t.pnl, 0) || 1e-9;
+      document.getElementById('paperst-stats').innerHTML =
+        `Ekuitas <strong>$${Math.round(sst.equity).toLocaleString()}</strong> (${sret >= 0 ? '+' : ''}${sret.toFixed(1)}%) · Trade ${sn} · Win ${sw} · PF ${(sgp / sgl).toFixed(2)} · Mulai ${sst.started || '-'}${sst.open ? ` · <strong style="color:#e3b341">OPEN LONG @ $${sst.open.entry.toLocaleString()}</strong>` : ' · flat'}`;
+      document.getElementById('paperst-trades').innerHTML = sn
+        ? `<table style="width:100%;border-collapse:collapse;font-size:12px"><tr style="color:#8b949e"><th align="left">Masuk</th><th align="right">Entry</th><th align="right">Exit</th><th align="right">PnL</th><th align="right">R</th><th>Keluar</th></tr>` +
+          str.slice(-5).reverse().map(t => `<tr><td>${t.entry_tgl}</td><td align="right">$${t.entry.toLocaleString()}</td><td align="right">$${t.exit.toLocaleString()}</td><td align="right" style="color:${t.pnl > 0 ? '#3fb950' : '#f85149'}">${t.pnl > 0 ? '+' : ''}${t.pnl}</td><td align="right">${t.r}</td><td>${t.alasan}</td></tr>`).join('') + `</table>`
+        : 'Belum ada trade (menunggu flip-up pertama).';
+    } else {
+      document.getElementById('paperst-stats').textContent = 'paper-st belum pernah jalan.';
+    }
+  } catch(e) { document.getElementById('paperst-stats').textContent = 'Gagal muat paper-st.'; }
   const list = document.getElementById('news-list');
   list.innerHTML = '';
   let shown = 0;
