@@ -58,20 +58,22 @@ h1{color:#e3b341;margin-bottom:5px}
 <div id="gold-chart-note" style="font-size:12px;color:#8b949e;text-align:center"></div></div>
 <div class="card" style="margin-bottom:20px"><h2>Logika: SEARAH-TAKUT</h2>
 <div style="font-size:13px;line-height:1.7;color:#8b949e">Takut (perang, resesi, dovish) = bullish emas → <strong>BELI</strong>. Euforia tanpa takut = WASPADA. Kebalikan logika BTC yang kontrarian.</div></div>
-<h2>Berita Emas</h2>
-<div id="news-list"></div>
-<div id="news-more" style="text-align:center;color:#8b949e;font-size:13px;padding:10px"></div>
 <div class="card" style="margin-bottom:20px" id="paper"><h2>📄 Paper Bot Emas (SIMULASI)</h2>
 <div id="paper-stats" style="font-size:13px;line-height:1.8">Memuat…</div>
 <div style="max-width:700px;margin:10px auto"><canvas id="paperChart"></canvas></div>
 <div id="paper-trades" style="font-size:13px;overflow-x:auto">-</div>
 <div style="font-size:12px;color:#8b949e;margin-top:8px">Aturan: LONG saat vonis BELI · risiko 1% · stop 1,5×ATR-14 · TP 2R · tanpa leverage · dievaluasi setelah ≥30 trade vs buy-and-hold.</div></div>
+<div class="card" style="margin-bottom:20px"><h2>Logika: IKUT-TREN (ST)</h2>
+<div style="font-size:13px;line-height:1.7;color:#8b949e">Harga di atas band Supertrend = bullish → <strong>LONG saat flip-up</strong>; jatuh di bawah band = keluar. Baca <em>harga</em>, bukan berita — kebalikan SEARAH-TAKUT yang baca takut. Param finder p=10/m=0,3.</div></div>
 <div class="card" style="margin-bottom:20px" id="paperst"><h2>📄 Paper-ST Supertrend (SIMULASI)</h2>
 <div id="paperst-stats" style="font-size:13px;line-height:1.8">Memuat…</div>
 <div id="paperst-trades" style="font-size:13px;overflow-x:auto">-</div>
 <div style="font-size:12px;color:#8b949e;margin-top:8px">Param finder p=10/m=0,3 (TEST +1,1%, n=9 — BELUM validasi kuat) · LONG-only · dievaluasi setelah ≥30 trade vs buy-and-hold.</div></div>
 <div class="card" style="margin-bottom:20px"><h2>Uji Musiman (live)</h2><div id="season-test" style="font-size:13px;line-height:1.8">Memuat…</div>
 <div style="font-size:12px;color:#8b949e;margin-top:8px">Klaim: Jan +5% (bullish) · Sep KONFLIKS (sumber trader: bearish 90% dekade terakhir vs paper SSRN: +2,23% terbaik) · Q1 positif 70% (20 thn) · Jul positif 65%. Bulan tanpa klaim = tak dinilai. Skor dari histori harga sendiri.</div></div>
+<h2>Berita Emas</h2>
+<div id="news-list"></div>
+<div id="news-more" style="text-align:center;color:#8b949e;font-size:13px;padding:10px"></div>
 <p class="footer">FXStreet + Fed Press | Harga Swissquote spot | Lokal PC (tanpa kuota)</p>
 <script>
 async function load() {
@@ -178,11 +180,10 @@ async function load() {
   } catch(e) { idr = ''; }
   document.getElementById('gold-cards').innerHTML = `
     <div class="card"><h2>Harga Emas (XAU)</h2><div class="val neu">$${sent.harga?.toLocaleString() || '?'}</div><div style="font-size:12px;color:#8b949e">${sent.harga_src || ''}</div>${idr}</div>
-    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div><div style="font-size:12px;color:#8b949e;margin-top:6px">Sentimen ${sent.avg_compound} · Fear ${sent.fear_hits}</div></div>
+    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div><div style="font-size:12px;color:#8b949e;margin-top:6px">Sentimen ${sent.avg_compound} · Fear ${sent.fear_hits}${sent.cot && sent.cot.date ? ` · COT ${sent.cot.mm_net >= 0 ? '+' : ''}${sent.cot.mm_net.toLocaleString()} (${sent.cot.mm_pct_oi}% OI)` : ''}</div></div>
     ${stTrend ? `<div class="card"><h2>Vonis-ST</h2><div class="val ${stc}" style="font-size:22px">${stTrend}</div></div>` : ''}
     <div class="card" id="paper-mini"><h2>📄 Paper</h2><div class="val neu">…</div></div>
     <div class="card" id="paperst-mini"><h2>📄 Paper-ST</h2><div class="val neu">…</div></div>
-    ${sent.cot && sent.cot.date ? `<div class="card"><h2>COT MM Net (${sent.cot.date.slice(5)})</h2><div class="val ${sent.cot.mm_net >= 0 ? 'pos' : 'neg'}">${sent.cot.mm_net >= 0 ? '+' : ''}${sent.cot.mm_net.toLocaleString()}</div><div style="font-size:12px;color:#8b949e">${sent.cot.mm_pct_oi}% OI · WoW ${sent.cot.mm_chg_wow >= 0 ? '+' : ''}${sent.cot.mm_chg_wow.toLocaleString()} (CFTC, tiap Selasa)</div></div>` : ''}
   `;
   try {
     const [pst, ptr, pequ] = await Promise.all([
