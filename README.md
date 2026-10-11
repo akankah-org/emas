@@ -26,3 +26,17 @@ E:\emas/
 - Live: https://120n1aja-emassentimen.static.hf.space/ (Space statis,
   upload manual via `export_static.py` + huggingface_hub, 12 Okt 2026).
 - Jalankan lokal: `python E:\emas\dashboard.py` (:8005).
+
+## Aturan Main Dua Kartu (12 Okt, keputusan user)
+
+- Juara = **return % terbesar** (BEST card).
+- Syarat ikut dinilai: ≥30 trade + expectancy positif + DD <20% +
+  kalahkan buy-and-hold. Belum lolos = "belum dinilai".
+- Pemenang + persetujuan eksplisit user = kandidat bot live
+  (API trade-only + dana kecil + kill-switch).
+
+## Dua Paper (12 Okt)
+
+- 📄 Paper: sinyal vonis sentimen (searah-takut), LONG-only.
+- 📄 Paper-ST: supertrend p=10/m=0,3 (finder TEST +1,1% n=9).
+  Prinsip: pasar satu, juri dua.
