@@ -151,10 +151,13 @@ async function load() {
   } catch(e) {
     document.getElementById('gold-chart-note').textContent = 'Belum ada histori harga.';
   }
-  const [news, sent] = await Promise.all([
+  const [news, sent, sst0] = await Promise.all([
     fetch('data/latest.json' + bust).then(r=>r.json()),
-    fetch('data/gold_sentiment.json' + bust).then(r=>r.json())
+    fetch('data/gold_sentiment.json' + bust).then(r=>r.json()),
+    fetch('data/paper_st_state.json' + bust).then(r=>r.json()).catch(()=>null)
   ]);
+  const stTrend = sst0 && sst0.signal ? sst0.signal.trend : null;
+  const stc = stTrend === 'BULLISH' ? 'pos' : (stTrend === 'BEARISH' ? 'neg' : 'neu');
   document.getElementById('sub').textContent = `Update: ${new Date(sent.waktu).toLocaleString()} | ${sent.n} artikel`;
   const vc = sent.vonis.startsWith('BELI') ? 'pos' : (sent.vonis.startsWith('WASPADA') ? 'neg' : 'neu');
   let idr = '<div style="font-size:12px;color:#8b949e">kurs memuat…</div>';
@@ -175,7 +178,7 @@ async function load() {
   } catch(e) { idr = ''; }
   document.getElementById('gold-cards').innerHTML = `
     <div class="card"><h2>Harga Emas (XAU)</h2><div class="val neu">$${sent.harga?.toLocaleString() || '?'}</div><div style="font-size:12px;color:#8b949e">${sent.harga_src || ''}</div>${idr}</div>
-    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div></div>
+    <div class="card"><h2>Vonis</h2><div class="val ${vc}" style="font-size:22px">${sent.vonis}</div>${stTrend ? `<div class="val ${stc}" style="font-size:16px;margin-top:6px">ST: ${stTrend}</div>` : ''}</div>
     <div class="card"><h2>Sentimen Rata2</h2><div class="val ${sent.avg_compound < 0 ? 'neg' : 'pos'}">${sent.avg_compound}</div></div>
     <div class="card"><h2>Fear Hits</h2><div class="val ${sent.fear_hits > 0 ? 'neg' : 'neu'}">${sent.fear_hits}</div></div>
     <div class="card" id="paper-mini"><h2>📄 Paper</h2><div class="val neu">…</div></div>
