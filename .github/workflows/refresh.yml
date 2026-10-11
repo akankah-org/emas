@@ -1,0 +1,39 @@
+name: Refresh Emas
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 1x sehari 07:00 WIB (hemat kuota)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install deps + NLTK data
+        run: |
+          pip install -r requirements.txt
+          python -c "import nltk; nltk.download('vader_lexicon', quiet=True)"
+
+      - name: Collect + Paper
+        run: |
+          python collect.py
+          python paper_gold.py
+
+      - name: Commit data kembali
+        run: |
+          git config user.name "emas-bot"
+          git config user.email "emas-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "auto: refresh emas [skip ci]"
+          git push origin main
