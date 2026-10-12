@@ -110,7 +110,7 @@ def main():
     c = [b["c"] for b in bars]
     trend, stl = supertrend(h, lo, c, P, M)
     day = bars[-1]
-    a = float(np.mean([b["h"] - b["l"] for b in bars[-14:]]))
+    a = sum(b["h"] - b["l"] for b in bars[-14:]) / 14
     eq = st["equity"]
     trades = load(TRADES, [])
     equity = load(EQUITY, [])
