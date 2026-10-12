@@ -27,6 +27,8 @@ E:\emas/
   upload manual via `export_static.py` + huggingface_hub, 12 Okt 2026).
 - UI rapi 12 Okt: Vonis + Vonis-ST terpisah, sentimen/fear/COT di
   dalam Vonis, berita paling bawah, 2 kartu logika, 2 paper + BH.
+- Notif: digest data via @Lampu_emas_bot, status refresh via
+  @Opencodekubot (kunci di vault, secret di repo).
 - Jalankan lokal: `python E:\emas\dashboard.py` (:8005).
 
 ## Aturan Main Dua Kartu (12 Okt, keputusan user)
