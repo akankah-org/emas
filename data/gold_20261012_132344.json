@@ -1,0 +1,222 @@
+[
+  {
+    "source": "FXStreet",
+    "title": "Gold fails to sustain a break above $4,200, US CPI in focus",
+    "link": "https://www.fxstreet.com/news/gold-fails-to-sustain-a-break-above-4-200-us-cpi-in-focus-202610121129",
+    "published": "Mon, 12 Oct 2026 11:29:34 GMT",
+    "summary": "Gold (XAU/USD) edges lower on Monday, reversing earlier gains as traders avoid taking large positions ahead of US inflation data due later this week, which could offer fresh cues on the Federal Reserve’s (Fed) next move.",
+    "compound": -0.361,
+    "fear": true,
+    "collected_at": "2026-10-12T13:23:44.409098+00:00"
+  },
+  {
+    "source": "FXStreet",
+    "title": "Gold sticks to modest losses, seems vulnerable below $4,200 on Fed hike bets, bullish USD",
+    "link": "https://www.fxstreet.com/news/gold-holds-near-one-week-top-around-4-200-on-softer-usd-hawkish-fed-caps-gains-202610120452",
+    "published": "Mon, 12 Oct 2026 04:52:36 GMT",
+    "summary": "Gold (XAU/USD) extends its intraday retracement slide from a one-week high, hitting a fresh daily low around $4,170 during the early European session on Monday.",
+    "compound": -0.44,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.409937+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+    "published": "Fri, 9 Oct 2026 14:00:00 GMT",
+    "summary": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.476669+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm",
+    "published": "Thu, 8 Oct 2026 20:30:00 GMT",
+    "summary": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
+    "compound": -0.813,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477057+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+    "published": "Wed, 7 Oct 2026 18:00:00 GMT",
+    "summary": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477201+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces approval of application by Isabella Bank Corporation",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm",
+    "published": "Mon, 5 Oct 2026 20:30:00 GMT",
+    "summary": "Federal Reserve Board announces approval of application by Isabella Bank Corporation",
+    "compound": 0.735,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477356+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces approval of application by Fleur Capital Corporation",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm",
+    "published": "Fri, 2 Oct 2026 20:45:00 GMT",
+    "summary": "Federal Reserve Board announces approval of application by Fleur Capital Corporation",
+    "compound": 0.735,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477491+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm",
+    "published": "Fri, 2 Oct 2026 20:00:00 GMT",
+    "summary": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+    "compound": 0.34,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477702+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm",
+    "published": "Fri, 2 Oct 2026 15:00:00 GMT",
+    "summary": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.477816+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260930a.htm",
+    "published": "Wed, 30 Sep 2026 13:00:00 GMT",
+    "summary": "Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements",
+    "compound": -0.881,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478080+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Agencies publish resolution plan feedback letters for 15 banking organizations",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260929a.htm",
+    "published": "Tue, 29 Sep 2026 20:00:00 GMT",
+    "summary": "Agencies publish resolution plan feedback letters for 15 banking organizations",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478207+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces approval of application by Peoples Bancorp Inc.",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260925a.htm",
+    "published": "Fri, 25 Sep 2026 20:30:00 GMT",
+    "summary": "Federal Reserve Board announces approval of application by Peoples Bancorp Inc.",
+    "compound": 0.735,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478349+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm",
+    "published": "Thu, 24 Sep 2026 18:30:00 GMT",
+    "summary": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478574+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board issues enforcement action with former employee of Sandy Spring Bank",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260924a.htm",
+    "published": "Thu, 24 Sep 2026 15:00:00 GMT",
+    "summary": "Federal Reserve Board issues enforcement action with former employee of Sandy Spring Bank",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478711+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces approval of application by BancFirst Corporation",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260922a.htm",
+    "published": "Tue, 22 Sep 2026 20:30:00 GMT",
+    "summary": "Federal Reserve Board announces approval of application by BancFirst Corporation",
+    "compound": 0.735,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478837+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces termination of enforcement action with SNB Bancshares and Bank of Eufaula",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918b.htm",
+    "published": "Fri, 18 Sep 2026 15:00:00 GMT",
+    "summary": "Federal Reserve Board announces termination of enforcement action with SNB Bancshares and Bank of Eufaula",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.478976+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board issues enforcement actions with former employee of Northstar Bank, former employee of American Express Travel Related Services Company, Inc., and former employee of Regions Bank",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918a.htm",
+    "published": "Fri, 18 Sep 2026 15:00:00 GMT",
+    "summary": "Federal Reserve Board issues enforcement actions with former employee of Northstar Bank, former employee of American Express Travel Related Services Company, Inc., and former employee of Regions Bank",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.479198+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve issues FOMC statement",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+    "published": "Wed, 16 Sep 2026 18:00:00 GMT",
+    "summary": "Federal Reserve issues FOMC statement",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.479260+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm",
+    "published": "Wed, 16 Sep 2026 18:00:00 GMT",
+    "summary": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+    "compound": 0.0,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.479416+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260911a.htm",
+    "published": "Fri, 11 Sep 2026 14:00:00 GMT",
+    "summary": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
+    "compound": 0.421,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.479644+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Agencies reduce regulatory burden for community banks, increase eligibility for 18-month exam cycle",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260910a.htm",
+    "published": "Thu, 10 Sep 2026 20:00:00 GMT",
+    "summary": "Agencies reduce regulatory burden for community banks, increase eligibility for 18-month exam cycle",
+    "compound": -0.296,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.479817+00:00"
+  },
+  {
+    "source": "FedPress",
+    "title": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260904a.htm",
+    "published": "Fri, 4 Sep 2026 15:00:00 GMT",
+    "summary": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
+    "compound": 0.681,
+    "fear": false,
+    "collected_at": "2026-10-12T13:23:44.480011+00:00"
+  }
+]
