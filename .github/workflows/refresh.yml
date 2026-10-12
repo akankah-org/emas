@@ -54,6 +54,21 @@ jobs:
           print(f"Sentimen {s.get('avg_compound')} (n={s.get('n')}, fear={s.get('fear_hits')})")
           if c.get('date'):
               print(f"COT {c['date']}: MM {c['mm_net']:+,} ({c['mm_pct_oi']}% OI)".replace(',', '.'))
+          try:
+              p1 = json.load(open('data/paper_gold_state.json', encoding='utf-8'))
+              t1 = json.load(open('data/paper_gold_trades.json', encoding='utf-8'))
+              r1 = (p1.get('equity', 10000) / 10000 - 1) * 100
+              print(f"Paper: {r1:+.1f}% ({len(t1)} trade)")
+          except Exception:
+              pass
+          try:
+              p2 = json.load(open('data/paper_st_state.json', encoding='utf-8'))
+              t2 = json.load(open('data/paper_st_trades.json', encoding='utf-8'))
+              r2 = (p2.get('equity', 10000) / 10000 - 1) * 100
+              sg = p2.get('signal') or {}
+              print(f"Paper-ST {sg.get('trend', '?')}: {r2:+.1f}% ({len(t2)} trade)")
+          except Exception:
+              pass
           print(s.get('waktu', ''))
           PYEOF
           )
