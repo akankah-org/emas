@@ -15,6 +15,7 @@ jobs:
       TELE_BOT: ${{ secrets.LAMPU_EMAS_BOT }}
       TELE_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
       DEPLOY_BOT: ${{ secrets.OPENCODEKU_BOT }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +42,19 @@ jobs:
           git config user.email "emas-bot@users.noreply.github.com"
           git add data/
           git diff --cached --quiet || git commit -m "auto: refresh emas [skip ci]"
+          git push origin main
+
+      - name: Export + push Space
+        if: env.HF_TOKEN != ''
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python export_static.py
+          rm -rf /tmp/space && git clone "https://120n1aja:${HF_TOKEN}@huggingface.co/spaces/120n1aja/emassentimen" /tmp/space
+          cp static/index.html /tmp/space/index.html
+          mkdir -p /tmp/space/data && cp static/data/*.json /tmp/space/data/
+          cd /tmp/space && git config user.name "emas-bot" && git config user.email "emas-bot@users.noreply.github.com"
+          git add -A && git diff --cached --quiet || git commit -m "auto refresh"
           git push origin main
 
       - name: Notif vonis Telegram
