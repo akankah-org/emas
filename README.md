@@ -25,6 +25,8 @@ E:\emas/
 
 - Live: https://120n1aja-emassentimen.static.hf.space/ (Space statis,
   upload manual via `export_static.py` + huggingface_hub, 12 Okt 2026).
+- UI rapi 12 Okt: Vonis + Vonis-ST terpisah, sentimen/fear/COT di
+  dalam Vonis, berita paling bawah, 2 kartu logika, 2 paper + BH.
 - Jalankan lokal: `python E:\emas\dashboard.py` (:8005).
 
 ## Aturan Main Dua Kartu (12 Okt, keputusan user)
