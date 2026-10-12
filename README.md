@@ -29,6 +29,7 @@ E:\emas/
   dalam Vonis, berita paling bawah, 2 kartu logika, 2 paper + BH.
 - Notif: digest data via @Lampu_emas_bot, status refresh via
   @Opencodekubot (kunci di vault, secret di repo).
+- Digest isi 5 baris: harga+vonis, sentimen, COT, Paper, Paper-ST.
 - Jalankan lokal: `python E:\emas\dashboard.py` (:8005).
 
 ## Aturan Main Dua Kartu (12 Okt, keputusan user)
