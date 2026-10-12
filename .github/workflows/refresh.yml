@@ -12,8 +12,9 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
-      TELE_BOT: ${{ secrets.TELE_LAMPUBTC }}
+      TELE_BOT: ${{ secrets.LAMPU_EMAS_BOT }}
       TELE_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+      DEPLOY_BOT: ${{ secrets.OPENCODEKU_BOT }}
     steps:
       - uses: actions/checkout@v4
 
@@ -58,4 +59,12 @@ jobs:
           )
           curl -s -X POST "https://api.telegram.org/bot${TELE_BOT}/sendMessage" \
             -d "chat_id=${TELE_CHAT}" --data-urlencode "text=${MSG}" > /dev/null
-          echo "digest terkirim"
+          echo "digest terkirim (lampu_emas_bot)"
+
+      - name: Notif status deploy (Opencodeku)
+        if: always() && env.DEPLOY_BOT != ''
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${DEPLOY_BOT}/sendMessage" \
+            -d "chat_id=${TELE_CHAT}" \
+            --data-urlencode "text=emas refresh: ${{ job.status }} ($(date -u +%Y-%m-%dT%H:%MZ))" > /dev/null
+          echo "notif deploy terkirim (opencodekubot)"
