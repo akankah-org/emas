@@ -1,23 +1,33 @@
 [
   {
     "source": "FXStreet",
-    "title": "Gold fails to sustain a break above $4,200, US CPI in focus",
-    "link": "https://www.fxstreet.com/news/gold-fails-to-sustain-a-break-above-4-200-us-cpi-in-focus-202610121129",
-    "published": "Mon, 12 Oct 2026 11:29:34 GMT",
-    "summary": "Gold (XAU/USD) edges lower on Monday, reversing earlier gains as traders avoid taking large positions ahead of US inflation data due later this week, which could offer fresh cues on the Federal Reserve’s (Fed) next move.",
-    "compound": -0.361,
-    "fear": true,
-    "collected_at": "2026-10-12T13:37:40.903046+00:00"
+    "title": "Gold advances to $4,200 amid retreating USD; Fed hike bets to cap further gains",
+    "link": "https://www.fxstreet.com/news/gold-bounces-off-4-150-amid-modest-usd-pullback-but-stays-in-two-week-old-range-202610130353",
+    "published": "Tue, 13 Oct 2026 03:53:32 GMT",
+    "summary": "Gold (XAU/USD) builds on its modest intraday move up and hits a fresh daily high around the $4,200 neighborhood during the Asian session on Tuesday. The US Dollar (USD) retreats from its highest level since April 2025 amid some profit-taking, offering support to the commodity.",
+    "compound": 0.751,
+    "fear": false,
+    "collected_at": "2026-10-13T05:38:13.533420+00:00"
   },
   {
     "source": "FXStreet",
-    "title": "Gold sticks to modest losses, seems vulnerable below $4,200 on Fed hike bets, bullish USD",
-    "link": "https://www.fxstreet.com/news/gold-holds-near-one-week-top-around-4-200-on-softer-usd-hawkish-fed-caps-gains-202610120452",
-    "published": "Mon, 12 Oct 2026 04:52:36 GMT",
-    "summary": "Gold (XAU/USD) extends its intraday retracement slide from a one-week high, hitting a fresh daily low around $4,170 during the early European session on Monday.",
-    "compound": -0.44,
+    "title": "India Gold price today: Gold rises, according to FXStreet data",
+    "link": "https://www.fxstreet.com/news/india-gold-price-today-gold-rises-according-to-fxstreet-data-202610130435",
+    "published": "Tue, 13 Oct 2026 04:35:10 GMT",
+    "summary": "Gold prices rose in India on Tuesday, according to data compiled by FXStreet.",
+    "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:40.903886+00:00"
+    "collected_at": "2026-10-13T05:38:13.533613+00:00"
+  },
+  {
+    "source": "FXStreet",
+    "title": "Gold tumbles below $4,200 on higher oil prices, firmer US Dollar",
+    "link": "https://www.fxstreet.com/news/gold-tumbles-below-4-200-on-higher-oil-prices-firmer-us-dollar-202610122318",
+    "published": "Mon, 12 Oct 2026 23:18:51 GMT",
+    "summary": "Gold price (XAU/USD) falls to around $4,170 during the early Asian session on Tuesday. The precious metal retreats from a ‌one-week high on a stronger US Dollar (USD) and higher crude oil prices.",
+    "compound": 0.382,
+    "fear": false,
+    "collected_at": "2026-10-13T05:38:13.534013+00:00"
   },
   {
     "source": "FedPress",
@@ -27,7 +37,7 @@
     "summary": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.084363+00:00"
+    "collected_at": "2026-10-13T05:38:13.619435+00:00"
   },
   {
     "source": "FedPress",
@@ -37,7 +47,7 @@
     "summary": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
     "compound": -0.813,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.084810+00:00"
+    "collected_at": "2026-10-13T05:38:13.619689+00:00"
   },
   {
     "source": "FedPress",
@@ -47,7 +57,7 @@
     "summary": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.084945+00:00"
+    "collected_at": "2026-10-13T05:38:13.619760+00:00"
   },
   {
     "source": "FedPress",
@@ -57,7 +67,7 @@
     "summary": "Federal Reserve Board announces approval of application by Isabella Bank Corporation",
     "compound": 0.735,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.085115+00:00"
+    "collected_at": "2026-10-13T05:38:13.619852+00:00"
   },
   {
     "source": "FedPress",
@@ -67,7 +77,7 @@
     "summary": "Federal Reserve Board announces approval of application by Fleur Capital Corporation",
     "compound": 0.735,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.085274+00:00"
+    "collected_at": "2026-10-13T05:38:13.619943+00:00"
   },
   {
     "source": "FedPress",
@@ -77,7 +87,7 @@
     "summary": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
     "compound": 0.34,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.085505+00:00"
+    "collected_at": "2026-10-13T05:38:13.620066+00:00"
   },
   {
     "source": "FedPress",
@@ -87,7 +97,7 @@
     "summary": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.085627+00:00"
+    "collected_at": "2026-10-13T05:38:13.620133+00:00"
   },
   {
     "source": "FedPress",
@@ -97,7 +107,7 @@
     "summary": "Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements",
     "compound": -0.881,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.085949+00:00"
+    "collected_at": "2026-10-13T05:38:13.620288+00:00"
   },
   {
     "source": "FedPress",
@@ -107,7 +117,7 @@
     "summary": "Agencies publish resolution plan feedback letters for 15 banking organizations",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086073+00:00"
+    "collected_at": "2026-10-13T05:38:13.620360+00:00"
   },
   {
     "source": "FedPress",
@@ -117,7 +127,7 @@
     "summary": "Federal Reserve Board announces approval of application by Peoples Bancorp Inc.",
     "compound": 0.735,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086228+00:00"
+    "collected_at": "2026-10-13T05:38:13.620441+00:00"
   },
   {
     "source": "FedPress",
@@ -127,7 +137,7 @@
     "summary": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086463+00:00"
+    "collected_at": "2026-10-13T05:38:13.620578+00:00"
   },
   {
     "source": "FedPress",
@@ -137,7 +147,7 @@
     "summary": "Federal Reserve Board issues enforcement action with former employee of Sandy Spring Bank",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086616+00:00"
+    "collected_at": "2026-10-13T05:38:13.620656+00:00"
   },
   {
     "source": "FedPress",
@@ -147,7 +157,7 @@
     "summary": "Federal Reserve Board announces approval of application by BancFirst Corporation",
     "compound": 0.735,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086795+00:00"
+    "collected_at": "2026-10-13T05:38:13.620729+00:00"
   },
   {
     "source": "FedPress",
@@ -157,7 +167,7 @@
     "summary": "Federal Reserve Board announces termination of enforcement action with SNB Bancshares and Bank of Eufaula",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.086951+00:00"
+    "collected_at": "2026-10-13T05:38:13.620811+00:00"
   },
   {
     "source": "FedPress",
@@ -167,7 +177,7 @@
     "summary": "Federal Reserve Board issues enforcement actions with former employee of Northstar Bank, former employee of American Express Travel Related Services Company, Inc., and former employee of Regions Bank",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.087179+00:00"
+    "collected_at": "2026-10-13T05:38:13.620935+00:00"
   },
   {
     "source": "FedPress",
@@ -177,7 +187,7 @@
     "summary": "Federal Reserve issues FOMC statement",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.087252+00:00"
+    "collected_at": "2026-10-13T05:38:13.620973+00:00"
   },
   {
     "source": "FedPress",
@@ -187,7 +197,7 @@
     "summary": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
     "compound": 0.0,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.087416+00:00"
+    "collected_at": "2026-10-13T05:38:13.621063+00:00"
   },
   {
     "source": "FedPress",
@@ -197,7 +207,7 @@
     "summary": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
     "compound": 0.421,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.087662+00:00"
+    "collected_at": "2026-10-13T05:38:13.621202+00:00"
   },
   {
     "source": "FedPress",
@@ -207,7 +217,7 @@
     "summary": "Agencies reduce regulatory burden for community banks, increase eligibility for 18-month exam cycle",
     "compound": -0.296,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.087885+00:00"
+    "collected_at": "2026-10-13T05:38:13.621306+00:00"
   },
   {
     "source": "FedPress",
@@ -217,6 +227,6 @@
     "summary": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
     "compound": 0.681,
     "fear": false,
-    "collected_at": "2026-10-12T13:37:41.088100+00:00"
+    "collected_at": "2026-10-13T05:38:13.621420+00:00"
   }
 ]
