@@ -1,0 +1,22 @@
+[
+  {
+    "source": "FXStreet",
+    "title": "Gold declines to near $4,150 ahead of US CPI inflation data",
+    "link": "https://www.fxstreet.com/news/gold-declines-to-near-4-150-ahead-of-us-cpi-inflation-data-202610132321",
+    "published": "Tue, 13 Oct 2026 23:21:25 GMT",
+    "summary": "Gold price (XAU/USD) drifts lower to near $4,155 during the early Asian session on Wednesday. The precious metal extends the decline as rising oil prices fuel inflation concerns and prompt major central banks to tighten monetary policy.",
+    "compound": 0.459,
+    "fear": true,
+    "collected_at": "2026-10-14T03:41:42.009267+00:00"
+  },
+  {
+    "source": "FXStreet",
+    "title": "Dow Jones Industrial Average gives back a 500-point earnings jump",
+    "link": "https://www.fxstreet.com/news/dow-jones-industrial-average-gives-back-a-500-point-earnings-jump-202610132112",
+    "published": "Tue, 13 Oct 2026 21:12:57 GMT",
+    "summary": "Goldman Sachs (GS) earned $17.01 a share in the third quarter against a forecast near $13.00. JPMorgan Chase (JPM) missed on profit and revenue but raised its 2026 forecast for net interest income, what it earns on loans minus what it pays on deposits.",
+    "compound": 0.714,
+    "fear": false,
+    "collected_at": "2026-10-14T03:41:42.009577+00:00"
+  }
+]
