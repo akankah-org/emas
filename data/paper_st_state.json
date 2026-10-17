@@ -1,13 +1,13 @@
 {
   "equity": 10000.0,
   "open": null,
-  "managed_date": "2026-10-16",
+  "managed_date": "2026-10-17",
   "started": "2026-10-11",
   "start_xau": 4195.6001,
   "signal": {
     "trend": "BULLISH",
     "st": 4179.97,
-    "date": "2026-10-16",
+    "date": "2026-10-17",
     "flip": "-"
   }
 }
