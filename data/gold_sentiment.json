@@ -1,9 +1,9 @@
 {
   "n": 20,
-  "avg_compound": 0.1,
+  "avg_compound": 0.079,
   "fear_hits": 0,
   "vonis": "HOLD",
-  "harga": 4042.77,
+  "harga": 4037.16,
   "harga_src": "swissquote-spot",
   "cot": {
     "date": "2026-10-20",
@@ -11,5 +11,5 @@
     "mm_pct_oi": 25.9,
     "mm_chg_wow": -2883
   },
-  "waktu": "2026-10-28T04:11:11.761566+00:00"
+  "waktu": "2026-10-29T04:33:19.367849+00:00"
 }
